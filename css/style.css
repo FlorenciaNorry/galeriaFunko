@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Sansita Swashed", cursive;
+  background-color: wheat;
+  background-image: linear-gradient(
+    114.2deg,
+    rgba(121, 194, 243, 1) 22.6%,
+    rgba(255, 180, 239, 1) 67.7%
+  );
+}
+
+header {
+  background-color: #00dbde;
+  background-image: linear-gradient(
+    90deg,
+    #00dbde 0%,
+    #fc00ff 33%,
+    #70efed 66%,
+    #c65d9c 100%
+  );
+  text-align: center;
+  padding: 40px;
+  color: white;
+}
+main {
+  margin: 25px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+article {
+  width: 20%;
+  margin: 15px;
+}
+
+img {
+  width: 100%;
+  border-radius: 5%;
+  box-shadow: 4px 4px 5px rgb(150, 0, 0, 0.5);
+}
+
+img:hover {
+  box-shadow: 0px 0px 0px;
+  position: relative;
+  top: -5px;
+  left: -5px;
+  filter: grayscale(100%);
+  transition: 700ms;
+}
+
+footer {
+  background-color: teal;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+/* media queries: sirve para cambiar la forma de ver en los diferentes dispositivos*/
+/* tipos de medios: print(diferentes formas en que se puede imprimir), screen(pantallas donde no se considera los medios de impresion), speech(cuando un audio lee lo que dice una descripcion), all(funciona para todos los casos)*/
+
+/* dispositivos grandes*/
+@media all and (min-width: 992px) {
+  /*agregar estilos css*/
+  body {
+    background-color: #85ffbd;
+    background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+  }
+}
+
+/* dispositivos medianos*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-color: #ffffff;
+    background-image: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #6284ff 50%,
+      #ff0000 100%
+    );
+  }
+
+  article{
+    width: 44%;
+  }
+}
+
+/* dispositivos pequeños: celulares*/
+@media all and (min-width: 320px) and (max-width: 767px) {
+  body {
+    background-color: #ffe53b;
+    background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+  }
+
+  article{
+    width: 100%;
+  }
+}
+
+/* dispositivos muypequeños: extra small*/
+@media screen and (max-width: 319px) {
+  body {
+    background-color: #08aeea;
+    background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+  }
+
+  article{
+    width: 90%;
+  }
+}
